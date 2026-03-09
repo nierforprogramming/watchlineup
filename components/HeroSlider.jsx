@@ -11,7 +11,7 @@ const HeroSlider = () => {
   console.log(data.results);
 
   return (
-    <section className="w-full h-screen">
+    <section className="w-full min-h-svh h-dvh">
       <Swiper
         modules={[Autoplay]}
         slidesPerView={1}
@@ -24,7 +24,7 @@ const HeroSlider = () => {
       >
         {data?.results?.map((result) => (
           <SwiperSlide key={result.id}>
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full min-h-svh h-dvh overflow-hidden">
               {/* Background image */}
               <Image
                 src={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
