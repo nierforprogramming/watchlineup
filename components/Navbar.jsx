@@ -9,7 +9,7 @@ import Logo from "./Logo";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-black/80 m-2 sm:m-8 sm:rounded-sm">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] rounded-xl bg-black/30 backdrop-blur-md py-2 text-white">
       <div className="h-16 items-center flex justify-between">
         <Logo />
         {/* Desktop Menu */}
