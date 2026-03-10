@@ -29,7 +29,7 @@ const ScreenTimeSaturday = () => {
                 <div className="flex text-md sm:text-lg space-x-7">
                   <div> ⭐ {Math.ceil(result.voteAverage) ?? "N/A"} / 10</div>
                   <div> {result.releaseDate?.slice(0, 4) ?? "TBA"}</div>
-                  <div>1h 14m</div>
+                  <div>1h 11m</div>
                   <div>ScreenTime Saturday</div>
                 </div>
 
