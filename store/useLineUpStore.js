@@ -1,28 +1,31 @@
 import { create } from "zustand";
 import { media } from "@/data/media";
+import { lineup } from "@/data/lineup";
 import { getTMDBDetailsById, formatTMDBDetails } from "@/lib/tmdb";
 import { getTodayDayName } from "@/lib/utils";
-import { lineup } from "@/data/lineup";
 
 function createTMDBCacheKey(tmdbId, mediaType) {
   return `${mediaType}-${tmdbId}`;
 }
 
-function isEntryScheduledForDay(entry, day) {
+function isScheduledForDay(entry, day) {
   return entry.days.includes(day);
 }
 
 export const useLineUpStore = create((set, get) => ({
   today: getTodayDayName(),
-  items: [],
+
+  weeklyItems: [],
+  todayItems: [],
   featuredItems: [],
+  saturdayMovies: [],
+
   loading: false,
   error: null,
   detailsCache: {},
 
   refreshToday: async () => {
     const today = getTodayDayName();
-
     set({ today });
     await get().fetchLineup();
   },
@@ -37,15 +40,9 @@ export const useLineUpStore = create((set, get) => ({
     });
 
     try {
-      const todayEntries = lineup.filter((entry) =>
-        isEntryScheduledForDay(entry, today),
-      );
-
-      const uniqueWeeklyMediaIds = lineup.map((entry) => entry.mediaId);
-
       const cachePatch = {};
 
-      const getEnrichedMediaData = async (mediaItem) => {
+      const enrichMediaItem = async (mediaItem) => {
         const cacheKey = createTMDBCacheKey(
           mediaItem.tmdbId,
           mediaItem.mediaType,
@@ -66,52 +63,57 @@ export const useLineUpStore = create((set, get) => ({
         return tmdbData;
       };
 
-      const items = await Promise.all(
-        todayEntries.map(async (entry) => {
+      // enrich lineup
+      const weeklyItems = await Promise.all(
+        lineup.map(async (entry) => {
           const mediaItem = media.find((item) => item.id === entry.mediaId);
 
-          if (!mediaItem) {
-            return {
-              ...entry,
-              media: null,
-              tmdb: null,
-              status: "media_not_found",
-            };
-          }
+          if (!mediaItem) return null;
 
-          const tmdbData = await getEnrichedMediaData(mediaItem);
+          const tmdbData = await enrichMediaItem(mediaItem);
 
           return {
             ...entry,
             media: mediaItem,
             tmdb: tmdbData,
-            status: "ready",
           };
         }),
       );
 
-      const featuredItems = await Promise.all(
-        uniqueWeeklyMediaIds.map(async (mediaId) => {
-          const mediaItem = media.find((item) => item.id === mediaId);
+      const cleanWeeklyItems = weeklyItems.filter(Boolean);
 
-          if (!mediaItem) {
-            return null;
-          }
+      // today's lineup
+      const todayItems = cleanWeeklyItems.filter((item) =>
+        isScheduledForDay(item, today),
+      );
 
-          const tmdbData = await getEnrichedMediaData(mediaItem);
+      const tvItems = cleanWeeklyItems.filter(
+        (item) => item.media?.mediaType === "tv",
+      );
 
-          return {
-            media: mediaItem,
-            tmdb: tmdbData,
-          };
-        }),
+      const movieItems = cleanWeeklyItems.filter(
+        (item) => item.media?.mediaType === "movie",
+      );
+
+      // hero items (unique)
+      const featuredItems = [
+        ...new Map(tvItems.map((item) => [item.media.id, item])).values(),
+      ];
+
+      // saturday movies
+      const saturdayMovies = movieItems.filter((item) =>
+        isScheduledForDay(item, "Saturday"),
       );
 
       set((state) => ({
-        items: items.filter(Boolean),
-        featuredItems: featuredItems.filter(Boolean),
+        weeklyItems: cleanWeeklyItems,
+        todayItems,
+        featuredItems,
+        saturdayMovies,
+
         loading: false,
         error: null,
+
         detailsCache: {
           ...state.detailsCache,
           ...cachePatch,
@@ -119,8 +121,10 @@ export const useLineUpStore = create((set, get) => ({
       }));
     } catch (error) {
       set({
-        items: [],
+        weeklyItems: [],
+        todayItems: [],
         featuredItems: [],
+        saturdayMovies: [],
         loading: false,
         error: error.message || "Failed to load lineup",
       });

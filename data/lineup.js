@@ -87,4 +87,10 @@ export const lineup = [
     mediaId: "summer-camp-island",
     category: "ZzzToons",
   },
+  {
+    id: "the-spongebob-movie-screentime-saturday",
+    days: ["Saturday"],
+    mediaId: "the-spongebob-movie",
+    category: "ScreenTime Saturday",
+  },
 ];

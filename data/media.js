@@ -70,4 +70,11 @@ export const media = [
     tmdbId: 81665,
     mediaType: "tv",
   },
+
+  {
+    id: "the-spongebob-movie",
+    name: "The SpongeBob Movie: Search for SquarePants",
+    tmdbId: 991494,
+    mediaType: "movie",
+  },
 ];
