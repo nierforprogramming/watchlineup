@@ -1,0 +1,80 @@
+import React from "react";
+import SectionHeading from "./SectionHeading";
+import { useLineUpStore } from "@/store/useLineUpStore";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+const TodaysLineUp = () => {
+  const items = useLineUpStore((state) => state.items);
+
+  if (!items?.length) {
+    return (
+      <section className="w-full">
+        <SectionHeading text="Whats On Today?" />
+        <div className="flex min-h-[220px] items-center justify-center rounded-2xl bg-white/5 text-white/60">
+          Nothing scheduled for today.
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="w-full">
+      <SectionHeading text="Whats On Today?" />
+
+      <Swiper
+        className=""
+        spaceBetween={20}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          480: {
+            slidesPerView: 1.5,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        {items.map((item) => {
+          const result = item.tmdb;
+          return (
+            <SwiperSlide key={item.id} className="">
+              <div className="group overflow-hidden rounded-2xl bg-[#111]">
+                <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl bg-neutral-800">
+                  <Image
+                    src={`https://image.tmdb.org/t/p/original${result.posterPath}`}
+                    alt={result?.title || "poster"}
+                    fill
+                    sizes="(max-width: 480px) 80vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="px-2 py-3 space-y-3 text-white">
+                  <h3 className="line-clamp-1 text-2xl font-semibold sm:text-2xl">
+                    {result?.title || "Untitled"}
+                  </h3>
+
+                  <p className="mt-1 line-clamp-1 text-md sm:text-lg text-white/65">
+                    {item.category}
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </section>
+  );
+};
+
+export default TodaysLineUp;

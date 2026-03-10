@@ -18,6 +18,120 @@ export const sectionLinks = [
   },
 ];
 
+const entertainmentCategories = [
+  {
+    name: "TV Show",
+  },
+
+  { name: "Movie" },
+];
+
+const lineUpCategories = [
+  {
+    name: "Watch Streak",
+    color: "blue",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "Episode-A-Day",
+    color: "green",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "Snacks & Toons",
+    color: "red",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "Mind Snack",
+    color: "red",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "Prime Show",
+    color: "orange",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "ZzzToons",
+    color: "orange",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+
+  {
+    name: "ScreenTime Saturday",
+    color: "orange",
+    description: "Fuel for the tummy and fuel for the mind",
+  },
+];
+
+export const lineup = [
+  {
+    name: "The Legend of Vox Machina",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "Watch Streak",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+
+  {
+    name: "Fallout",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "Episode-A-Day",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+
+  {
+    name: "Kiff",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "Snacks & Toons",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+
+  {
+    name: "The Amazing World of Gumball",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "Mind Snack",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+
+  {
+    name: "Pokemon",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "Prime Show",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+
+  {
+    name: "We Baby Bears",
+    lineUpCategory: {
+      ...lineUpCategories.find(
+        (lineUpCategory) => lineUpCategory.name === "ZzzToons",
+      ),
+    },
+    entertainmentCategory: { ...entertainmentCategories[0] },
+  },
+];
+
 export const data = {
   page: 1,
   results: [
