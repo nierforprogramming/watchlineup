@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { lineUpCategories } from "@/assets";
-import { categoryColor } from "@/lib/utils";
 
 const TodaysLineUp = () => {
   const todayItems = useLineUpStore((state) => state.todayItems);

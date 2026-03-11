@@ -40,6 +40,7 @@ const Footer = () => {
               <div>Vite</div>
               <div>VS Code</div>
               <div>GitHub</div>
+              <div>TMDb API0</div>
             </div>
 
             <div className="space-y-3 flex-1">
@@ -65,7 +66,7 @@ const Footer = () => {
 
         <Link href="https://www.themoviedb.org/">
           <div className="text-gray-300 justify-center cursor-pointer font-semibold space-x-2 mb-10 flex">
-            <p> Powered by The Movie Databse</p>
+            <p>Powered by The Movie Database</p>
             <Image src="/TMDb.svg" width={80} height={80} alt="TMDb logo" />
           </div>
         </Link>

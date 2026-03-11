@@ -17,7 +17,7 @@ const Home = () => {
     <div className="relative">
       <Navbar />
       <Hero />
-      <div className="px-4 pt-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
+      <div className="px-4 py-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
         <TodaysLineUp />
       </div>
       <ScreenTimeSaturday />
