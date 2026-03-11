@@ -107,4 +107,24 @@ export const lineup = [
     mediaId: "onward",
     category: "ScreenTime Saturday",
   },
+
+  {
+    id: "that-time-i-got-reincarnated-as-a-slime-watch-streak",
+    days: ["Thursday"],
+    mediaId: "that-time-i-got-reincarnated-as-a-slime",
+    category: "Watch Streak",
+  },
+
+  {
+    id: "avatar-the-last-airbender-evening-flix",
+    days: ["Thursday"],
+    mediaId: "avatar-the-last-airbender",
+    category: "Evening Flix",
+  },
+  {
+    id: "close-enough-zzztoons",
+    days: ["Thursday"],
+    mediaId: "close-enough",
+    category: "ZzzToons",
+  },
 ];

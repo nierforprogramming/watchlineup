@@ -90,4 +90,22 @@ export const media = [
     tmdbId: 508439,
     mediaType: "movie",
   },
+  {
+    id: "that-time-i-got-reincarnated-as-a-slime",
+    name: "That Time I Got Reincarnated as a Slime",
+    tmdbId: 82684,
+    mediaType: "tv",
+  },
+  {
+    id: "avatar-the-last-airbender",
+    name: "Avatar: The Last Airbender",
+    tmdbId: 246,
+    mediaType: "tv",
+  },
+  {
+    id: "close-enough",
+    name: "Close Enough",
+    tmdbId: 84503,
+    mediaType: "tv",
+  },
 ];
