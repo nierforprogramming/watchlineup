@@ -6,13 +6,15 @@ import { useLineUpStore } from "@/store/useLineUpStore";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { lineUpCategories } from "@/assets";
+import { categoryColor } from "@/lib/utils";
 
 const TodaysLineUp = () => {
   const todayItems = useLineUpStore((state) => state.todayItems);
 
   if (!todayItems?.length) {
     return (
-      <section className="w-full" id="todayslineup">
+      <section className="w-full">
         <SectionHeading text="Whats On Today?" />
         <div className="flex min-h-[220px] items-center justify-center rounded-2xl bg-white/5 text-white/60">
           Nothing scheduled for today.
@@ -22,7 +24,7 @@ const TodaysLineUp = () => {
   }
 
   return (
-    <section className="w-full">
+    <section className="w-full" id="lineup">
       <SectionHeading text="Whats On Today?" />
 
       <Swiper
@@ -37,6 +39,9 @@ const TodaysLineUp = () => {
       >
         {todayItems.map((item) => {
           const result = item.tmdb;
+          const categoryColor = lineUpCategories.find(
+            (c) => c.name === item.category,
+          );
 
           return (
             <SwiperSlide key={item.id}>
@@ -59,7 +64,11 @@ const TodaysLineUp = () => {
                     {result?.title || "Untitled"}
                   </h3>
 
-                  <p className="text-md text-white/65">{item.category}</p>
+                  <p
+                    className={`text-md text-white/65 ${categoryColor?.color} || "bg-gray-600" px-2 py-2 rounded-sm w-fit`}
+                  >
+                    {item.category}
+                  </p>
                 </div>
               </div>
             </SwiperSlide>

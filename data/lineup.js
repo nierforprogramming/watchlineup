@@ -100,4 +100,11 @@ export const lineup = [
     mediaId: "iron-lung",
     category: "ScreenTime Saturday",
   },
+
+  {
+    id: "onward-screentime-saturday",
+    days: ["Saturday"],
+    mediaId: "onward",
+    category: "ScreenTime Saturday",
+  },
 ];

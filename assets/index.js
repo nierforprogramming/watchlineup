@@ -6,7 +6,7 @@ export const sectionLinks = [
 
   {
     name: "Today's Lineup",
-    path: "#todayslineup",
+    path: "#lineup",
   },
   {
     name: "Section 2",
@@ -25,49 +25,18 @@ const entertainmentCategories = [
 
   { name: "Movie" },
 ];
-
-const lineUpCategories = [
-  {
-    name: "Watch Streak",
-    color: "blue",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "Episode-A-Day",
-    color: "green",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "Snacks & Toons",
-    color: "red",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "Mind Snack",
-    color: "red",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "Prime Show",
-    color: "orange",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "ZzzToons",
-    color: "orange",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
-
-  {
-    name: "ScreenTime Saturday",
-    color: "orange",
-    description: "Fuel for the tummy and fuel for the mind",
-  },
+export const lineUpCategories = [
+  { name: "Watch Streak", color: "bg-emerald-500/20 text-emerald-400" },
+  { name: "BuzzWatch", color: "bg-orange-500/20 text-orange-400" },
+  { name: "ScreenTime Saturday", color: "bg-rose-500/20 text-rose-400" },
+  { name: "Weekend Watchout", color: "bg-teal-500/20 text-teal-400" },
+  { name: "WakeUp Watch", color: "bg-sky-500/20 text-sky-400" },
+  { name: "Mind Snack", color: "bg-purple-500/20 text-purple-300" },
+  { name: "Evening Flix", color: "bg-indigo-500/20 text-indigo-400" },
+  { name: "ZzzToons", color: "bg-purple-700/20 text-purple-400" },
+  { name: "Prime Show", color: "bg-yellow-500/20 text-yellow-400" },
+  { name: "Episode-A-Day", color: "bg-green-400/20 text-green-300" },
+  { name: "Snacks & Toons", color: "bg-orange-300/20 text-orange-300" },
 ];
 
 export const lineup = [

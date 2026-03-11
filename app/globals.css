@@ -3,7 +3,6 @@
 :root {
   --swiper-theme-color: white;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +10,7 @@ html {
 @theme {
   --color-background: #161616;
   --color-section-background: #221f1f;
+  --color-text-gray: #545454;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {

@@ -1,9 +1,11 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <div className="uppercase text-2xl text-white font-bold px-4">
-      watchline
+    <div
+      className={`${className ? className : ""} uppercase text-2xl text-white font-bold px-4`}
+    >
+      watchlineup
     </div>
   );
 };

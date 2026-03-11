@@ -84,4 +84,10 @@ export const media = [
     tmdbId: 1116201,
     mediaType: "movie",
   },
+  {
+    id: "onward",
+    name: "Onward",
+    tmdbId: 508439,
+    mediaType: "movie",
+  },
 ];

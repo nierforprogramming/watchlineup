@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import ScreenTimeSaturday from "@/components/ScreenTimeSaturday";
@@ -20,6 +21,9 @@ const Home = () => {
         <TodaysLineUp />
       </div>
       <ScreenTimeSaturday />
+      <div className="px-4 pt-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
+        <Footer />
+      </div>
     </div>
   );
 };
