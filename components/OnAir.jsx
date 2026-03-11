@@ -30,16 +30,14 @@ const OnAir = () => {
   }
 
   const category = lineUpCategories.find(
-    (lineupcategory) => lineupcategory.name === timeShow?.category,
+    (item) => item.name === timeShow?.category
   );
-
-  console.log(category);
 
   const result = timeShow.tmdb;
 
   return (
     <section className="text-gray-300 space-y-6">
-      {/* Greeting */}
+      {/* Heading */}
       <div>
         <SectionHeading className="sm:mb-2" text={time.title} />
         <p className="text-gray-400">
@@ -49,8 +47,8 @@ const OnAir = () => {
 
       {/* Hero Card */}
       <div className="relative w-full overflow-hidden rounded-2xl">
-        {/* Background Image */}
-        <div className="relative h-100 sm:h-150 w-full">
+        {/* Background */}
+        <div className="relative h-[420px] sm:h-[600px] w-full">
           <Image
             src={`https://image.tmdb.org/t/p/original${result.backdropPath}`}
             alt={result.title || "background"}
@@ -66,13 +64,15 @@ const OnAir = () => {
           flex items-end sm:items-center
           justify-center sm:justify-start
           p-6 sm:p-12
-          bg-gradient-to-t sm:bg-gradient-to-r
-          from-${category?.bg}/40 via-${category?.bg}/20 to-transparent`}
+          bg-gradient-to-t sm:bg-gradient-to-tr
+          ${category?.overlay} to-transparent`}
         >
-          {/* Text Contai ner */}
-          <div className="max-w-xl text-center sm:text-right space-y-4">
-            {/* Category */}
-            <p className={`uppercase  rounded-sm tracking-widest text-sm inline-block ${category?.color} text-white px-3`}>
+          {/* Text Content */}
+          <div className="max-w-xl text-center sm:text-left space-y-4">
+            {/* Category Badge */}
+            <p
+              className={`uppercase tracking-widest text-sm inline-block rounded-sm px-3 py-1 text-white ${category?.color}`}
+            >
               {timeShow.category}
             </p>
 
@@ -86,7 +86,7 @@ const OnAir = () => {
               {result.genres.map((genre) => (
                 <span
                   key={genre.id}
-                  className=" bg-black/30 backdrop-blur-md px-3 py-1 rounded-md text-sm text-white"
+                  className="bg-black/30 backdrop-blur-md px-3 py-1 rounded-md text-sm text-white"
                 >
                   {genre.name}
                 </span>

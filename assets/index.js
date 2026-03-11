@@ -18,6 +18,7 @@ export const sectionLinks = [
   },
 ];
 
+
 const entertainmentCategories = [
   {
     name: "TV Show",
@@ -26,6 +27,7 @@ const entertainmentCategories = [
   { name: "Movie" },
 ];
 
+
 export const TIME_CATEGORY_MAP = {
   morning: "WakeUp Watch",
   afternoon: "Snacks & Toons",
@@ -33,47 +35,77 @@ export const TIME_CATEGORY_MAP = {
   night: "ZzzToons",
 };
 
+
 export const lineUpCategories = [
-  { name: "Watch Streak", color: "bg-emerald-500/20 text-emerald-400" },
+  {
+    name: "Watch Streak",
+    color: "bg-emerald-500/20 text-emerald-400",
+    overlay: "from-emerald-500/40 via-emerald-500/20",
+  },
 
-  { name: "BuzzWatch", color: "bg-orange-500/20 text-orange-400" },
+  {
+    name: "BuzzWatch",
+    color: "bg-orange-500/20 text-orange-400",
+    overlay: "from-orange-500/40 via-orange-500/20",
+  },
 
-  { name: "ScreenTime Saturday", color: "bg-pink-500/20 text-pink-400" },
+  {
+    name: "ScreenTime Saturday",
+    color: "bg-pink-500/20 text-pink-400",
+    overlay: "from-pink-500/40 via-pink-500/20",
+  },
 
-  { name: "Weekend Watchout", color: "bg-teal-500/20 text-teal-400" },
+  {
+    name: "Weekend Watchout",
+    color: "bg-teal-500/20 text-teal-400",
+    overlay: "from-teal-500/40 via-teal-500/20",
+  },
 
   {
     name: "WakeUp Watch",
     color: "bg-sky-500/20 text-sky-400",
     desc: "Morning content to fully wakeup your mind",
-    bg: "sky-500",
+    overlay: "from-sky-500/40 via-sky-500/20",
   },
 
-  { name: "Mind Snack", color: "bg-fuchsia-500/20 text-fuchsia-400" },
+  {
+    name: "Mind Snack",
+    color: "bg-fuchsia-500/20 text-fuchsia-400",
+    overlay: "from-fuchsia-500/40 via-fuchsia-500/20",
+  },
 
   {
     name: "Evening Flix",
     color: "bg-indigo-500/20 text-indigo-400",
-    bg: "indigo-500",
+    overlay: "from-indigo-500/40 via-indigo-500/20",
   },
 
   {
     name: "ZzzToons",
     color: "bg-purple-700/20 text-purple-400",
     desc: "A short comfort watch to close the day",
-    bg: "purple-700",
+    overlay: "from-purple-700/40 via-purple-700/20",
   },
 
-  { name: "Prime Show", color: "bg-yellow-500/20 text-yellow-400" },
+  {
+    name: "Prime Show",
+    color: "bg-yellow-500/20 text-yellow-400",
+    overlay: "from-yellow-500/40 via-yellow-500/20",
+  },
 
-  { name: "Episode-A-Day", color: "bg-cyan-500/20 text-cyan-400" },
+  {
+    name: "Episode-A-Day",
+    color: "bg-cyan-500/20 text-cyan-400",
+    overlay: "from-cyan-500/40 via-cyan-500/20",
+  },
 
   {
     name: "Snacks & Toons",
     color: "bg-lime-500/20 text-lime-400",
-    bg: "lime-500",
+    overlay: "from-lime-500/40 via-lime-500/20",
   },
 ];
+
 
 export const lineup = [
   {
