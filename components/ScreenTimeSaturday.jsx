@@ -19,7 +19,7 @@ const ScreenTimeSaturday = () => {
   return (
     <div className="bg-section-background pb-20" id="nextonmovies">
       <div className="px-4 pt-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
-        <SectionHeading text={"This Weekend On Movies"} />
+        <SectionHeading text={"Movies On Saturday"} />
 
         <Swiper
           modules={[Autoplay, Pagination]}
@@ -43,7 +43,7 @@ const ScreenTimeSaturday = () => {
                     {result.genres.map((genre) => (
                       <span
                         key={genre.id}
-                        className="mx-1 my-4 inline-block bg-black/50 text-md sm:text-lg px-2 py-1 rounded-sm"
+                        className="mx-1 my-4 inline-block bg-black/30 backdrop-blur-md text-md sm:text-lg px-1 py-2 rounded-sm"
                       >
                         {genre.name}
                       </span>
@@ -53,13 +53,15 @@ const ScreenTimeSaturday = () => {
                       {result.title}
                     </div>
 
-                    <div className="flex text-md sm:text-lg space-x-7">
+                    <div className="flex text-md items-center sm:text-lg space-x-5">
                       <div>
                         ⭐ {Math.ceil(result.voteAverage) ?? "N/A"} / 10
                       </div>
                       <div>{result.releaseDate?.slice(0, 4) ?? "TBA"}</div>
                       <div>1h 11m</div>
-                      <div>ScreenTime Saturday</div>
+                      <div className="bg-pink-500/20 text-pink-400 px-1 py-2 rounded-sm w-fit">
+                        {item.category}
+                      </div>
                     </div>
 
                     <div className="my-8 font-semibold max-w-2xl text-md sm:text-lg leading-8 line-clamp-3">

@@ -64,7 +64,7 @@ const TodaysLineUp = () => {
                   </h3>
 
                   <p
-                    className={`text-md text-white/65 ${categoryColor?.color} || "bg-gray-600" px-2 py-2 rounded-sm w-fit`}
+                    className={`text-md ${categoryColor?.color} || "bg-gray-600" px-1 py-2 rounded-sm w-fit`}
                   >
                     {item.category}
                   </p>

@@ -25,18 +25,54 @@ const entertainmentCategories = [
 
   { name: "Movie" },
 ];
+
+export const TIME_CATEGORY_MAP = {
+  morning: "WakeUp Watch",
+  afternoon: "Snacks & Toons",
+  evening: "Evening Flix",
+  night: "ZzzToons",
+};
+
 export const lineUpCategories = [
   { name: "Watch Streak", color: "bg-emerald-500/20 text-emerald-400" },
+
   { name: "BuzzWatch", color: "bg-orange-500/20 text-orange-400" },
-  { name: "ScreenTime Saturday", color: "bg-rose-500/20 text-rose-400" },
+
+  { name: "ScreenTime Saturday", color: "bg-pink-500/20 text-pink-400" },
+
   { name: "Weekend Watchout", color: "bg-teal-500/20 text-teal-400" },
-  { name: "WakeUp Watch", color: "bg-sky-500/20 text-sky-400" },
-  { name: "Mind Snack", color: "bg-purple-500/20 text-purple-300" },
-  { name: "Evening Flix", color: "bg-indigo-500/20 text-indigo-400" },
-  { name: "ZzzToons", color: "bg-purple-700/20 text-purple-400" },
+
+  {
+    name: "WakeUp Watch",
+    color: "bg-sky-500/20 text-sky-400",
+    desc: "Morning content to fully wakeup your mind",
+    bg: "sky-500",
+  },
+
+  { name: "Mind Snack", color: "bg-fuchsia-500/20 text-fuchsia-400" },
+
+  {
+    name: "Evening Flix",
+    color: "bg-indigo-500/20 text-indigo-400",
+    bg: "indigo-500",
+  },
+
+  {
+    name: "ZzzToons",
+    color: "bg-purple-700/20 text-purple-400",
+    desc: "A short comfort watch to close the day",
+    bg: "purple-700",
+  },
+
   { name: "Prime Show", color: "bg-yellow-500/20 text-yellow-400" },
-  { name: "Episode-A-Day", color: "bg-green-400/20 text-green-300" },
-  { name: "Snacks & Toons", color: "bg-orange-300/20 text-orange-300" },
+
+  { name: "Episode-A-Day", color: "bg-cyan-500/20 text-cyan-400" },
+
+  {
+    name: "Snacks & Toons",
+    color: "bg-lime-500/20 text-lime-400",
+    bg: "lime-500",
+  },
 ];
 
 export const lineup = [

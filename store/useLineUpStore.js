@@ -2,7 +2,8 @@ import { create } from "zustand";
 import { media } from "@/data/media";
 import { lineup } from "@/data/lineup";
 import { getTMDBDetailsById, formatTMDBDetails } from "@/lib/tmdb";
-import { getTodayDayName } from "@/lib/utils";
+import { getHours, getTodayDayName, greet } from "@/lib/utils";
+import { TIME_CATEGORY_MAP } from "@/assets";
 
 function createTMDBCacheKey(tmdbId, mediaType) {
   return `${mediaType}-${tmdbId}`;
@@ -14,24 +15,27 @@ function isScheduledForDay(entry, day) {
 
 export const useLineUpStore = create((set, get) => ({
   today: getTodayDayName(),
-
+  time: greet(getHours()),
   weeklyItems: [],
   todayItems: [],
   featuredItems: [],
+  timeBasedShow: null,
   saturdayMovies: [],
-
   loading: false,
   error: null,
   detailsCache: {},
 
   refreshToday: async () => {
     const today = getTodayDayName();
-    set({ today });
+    const time = greet(getHours());
+
+    set({ today, time });
     await get().fetchLineup();
   },
 
   fetchLineup: async () => {
     const today = get().today;
+    const time = get().time;
     const currentCache = get().detailsCache;
 
     set({
@@ -63,7 +67,6 @@ export const useLineUpStore = create((set, get) => ({
         return tmdbData;
       };
 
-      // enrich lineup
       const weeklyItems = await Promise.all(
         lineup.map(async (entry) => {
           const mediaItem = media.find((item) => item.id === entry.mediaId);
@@ -82,7 +85,6 @@ export const useLineUpStore = create((set, get) => ({
 
       const cleanWeeklyItems = weeklyItems.filter(Boolean);
 
-      // today's lineup
       const todayItems = cleanWeeklyItems.filter((item) =>
         isScheduledForDay(item, today),
       );
@@ -95,12 +97,18 @@ export const useLineUpStore = create((set, get) => ({
         (item) => item.media?.mediaType === "movie",
       );
 
-      // hero items (unique)
       const featuredItems = [
         ...new Map(tvItems.map((item) => [item.media.id, item])).values(),
       ];
 
-      // saturday movies
+      const categoryForTime = TIME_CATEGORY_MAP[time.time];
+
+      const timeBasedShow =
+        todayItems.find(
+          (item) =>
+            item.category === categoryForTime && item.media?.mediaType === "tv",
+        ) || null;
+
       const saturdayMovies = movieItems.filter((item) =>
         isScheduledForDay(item, "Saturday"),
       );
@@ -110,10 +118,9 @@ export const useLineUpStore = create((set, get) => ({
         todayItems,
         featuredItems,
         saturdayMovies,
-
+        timeBasedShow,
         loading: false,
         error: null,
-
         detailsCache: {
           ...state.detailsCache,
           ...cachePatch,
@@ -125,6 +132,7 @@ export const useLineUpStore = create((set, get) => ({
         todayItems: [],
         featuredItems: [],
         saturdayMovies: [],
+        timeBasedShow: null,
         loading: false,
         error: error.message || "Failed to load lineup",
       });

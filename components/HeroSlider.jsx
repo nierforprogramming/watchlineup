@@ -55,7 +55,7 @@ const HeroSlider = () => {
                 />
 
                 <div className="absolute inset-0 bg-black/35 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/40 z-10" />
+                <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/20 to-black/40 z-10" />
 
                 <div className="absolute inset-0 z-20 flex items-start">
                   <div className="w-full px-4 pt-52 sm:px-8 md:px-12 lg:px-20">
@@ -63,6 +63,17 @@ const HeroSlider = () => {
                       <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-white/80">
                         ON YOUR LINE UP
                       </p>
+
+                      <div>
+                        {result.genres.map((genre) => (
+                          <span
+                            key={genre.id}
+                            className="mx-1 my-4 inline-block bg-black/30 backdrop-blur-md text-md sm:text-lg px-1 py-2 rounded-sm"
+                          >
+                            {genre.name}
+                          </span>
+                        ))}
+                      </div>
 
                       <h1 className="text-3xl uppercase font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
                         {result.title}

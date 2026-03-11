@@ -65,9 +65,15 @@ const Footer = () => {
         </div>
 
         <Link href="https://www.themoviedb.org/">
-          <div className="text-gray-300 justify-center cursor-pointer font-semibold space-x-2 mb-10 flex">
+          <div className="text-gray-300 w-auto h-auto justify-center cursor-pointer font-semibold space-x-2 mb-10 flex">
             <p>Powered by The Movie Database</p>
-            <Image src="/TMDb.svg" width={80} height={80} alt="TMDb logo" />
+            <Image
+              sizes={100}
+              src="/TMDb.svg"
+              width={80}
+              height={80}
+              alt="TMDb logo"
+            />
           </div>
         </Link>
       </div>

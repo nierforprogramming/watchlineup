@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import OnAir from "@/components/OnAir";
 import ScreenTimeSaturday from "@/components/ScreenTimeSaturday";
 import TodaysLineUp from "@/components/TodaysLineUp";
 import { useLineUpStore } from "@/store/useLineUpStore";
@@ -17,6 +18,9 @@ const Home = () => {
     <div className="relative">
       <Navbar />
       <Hero />
+      <div className="px-4 py-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
+        <OnAir />
+      </div>
       <div className="px-4 py-15 sm:pt-25 sm:px-8 md:px-12 lg:px-20">
         <TodaysLineUp />
       </div>
