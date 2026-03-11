@@ -65,14 +65,14 @@ const OnAir = () => {
           className={`absolute inset-0
           flex items-end sm:items-center
           justify-center sm:justify-start
-          p-1 sm:p-12
+          p-6 sm:p-12
           bg-gradient-to-t sm:bg-gradient-to-r
-          from-${category.bg}/40 via-${category.bg}/20 to-transparent`}
+          from-${category?.bg}/40 via-${category?.bg}/20 to-transparent`}
         >
           {/* Text Contai ner */}
-          <div className="max-w-xl text-center sm:text-left space-y-4">
+          <div className="max-w-xl text-center sm:text-right space-y-4">
             {/* Category */}
-            <p className="tracking-widest text-sm inline-block bg-purple-700/20 text-purple-400 px-3">
+            <p className={`uppercase  rounded-sm tracking-widest text-sm inline-block ${category?.color} text-white px-3`}>
               {timeShow.category}
             </p>
 
