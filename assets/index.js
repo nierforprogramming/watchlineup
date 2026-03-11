@@ -9,7 +9,7 @@ export const sectionLinks = [
     path: "#lineup",
   },
   {
-    name: "Section 2",
+    name: "On Air",
     path: "#section-two",
   },
   {
