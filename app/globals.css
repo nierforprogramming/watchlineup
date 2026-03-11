@@ -4,6 +4,10 @@
   --swiper-theme-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-background: #161616;
   --color-section-background: #221f1f;

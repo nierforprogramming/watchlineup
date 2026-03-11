@@ -40,6 +40,7 @@ const Navbar = () => {
             className="text-white text-lg p-3 block"
             href={link.path}
             key={link.name}
+            onClick={() => setIsOpen(!isOpen)}
           >
             {link.name}
           </Link>

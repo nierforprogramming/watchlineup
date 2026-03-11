@@ -12,7 +12,7 @@ const TodaysLineUp = () => {
 
   if (!todayItems?.length) {
     return (
-      <section className="w-full">
+      <section className="w-full" id="todayslineup">
         <SectionHeading text="Whats On Today?" />
         <div className="flex min-h-[220px] items-center justify-center rounded-2xl bg-white/5 text-white/60">
           Nothing scheduled for today.
