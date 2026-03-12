@@ -125,6 +125,6 @@ export const lineup = [
     id: "close-enough-zzztoons",
     days: ["Thursday"],
     mediaId: "close-enough",
-    category: "ZzzToons",
+    category: "Evening Flix",
   },
 ];

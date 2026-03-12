@@ -28,7 +28,7 @@ const entertainmentCategories = [
 
 export const TIME_CATEGORY_MAP = {
   morning: "WakeUp Watch",
-  afternoon: "Snacks & Toons",
+  afternoon: "Episode-A-Day",
   evening: "Evening Flix",
   night: "ZzzToons",
 };

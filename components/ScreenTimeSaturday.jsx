@@ -14,7 +14,14 @@ const ScreenTimeSaturday = () => {
   const saturdayMovies = useLineUpStore((state) => state.saturdayMovies);
 
   if (!saturdayMovies.length) {
-    return <div>No Saturday movies.</div>;
+    return (
+      <section className="w-full">
+        <SectionHeading text="Whats On Today?" />
+        <div className="flex min-h-[220px] items-center justify-center rounded-2xl bg-white/5 text-white/60">
+          Nothing scheduled for today.
+        </div>
+      </section>
+    );
   }
 
   return (

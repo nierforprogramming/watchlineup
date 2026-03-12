@@ -66,7 +66,7 @@ const TodaysLineUp = () => {
                   <p
                     className={`text-md ${categoryColor?.softBgColor || "bg-gray-600/20"} ${categoryColor?.textColor || "text-white"}  px-2 py-1 rounded-sm w-fit`}
                   >
-                    {item.category}
+                    {item.category || "No Category"}
                   </p>
                 </div>
               </div>
