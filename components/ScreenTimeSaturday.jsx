@@ -9,6 +9,7 @@ import SectionHeading from "./SectionHeading";
 import Image from "next/image";
 import { useLineUpStore } from "@/store/useLineUpStore";
 import { lineUpCategories } from "@/assets";
+import { convertToHourAndMinute } from "@/lib/utils";
 
 const ScreenTimeSaturday = () => {
   const saturdayMovies = useLineUpStore((state) => state.saturdayMovies);
@@ -23,6 +24,8 @@ const ScreenTimeSaturday = () => {
       </section>
     );
   }
+
+  console.log(saturdayMovies);
 
   return (
     <div className="bg-section-background pb-20" id="nextonmovies">
@@ -64,11 +67,9 @@ const ScreenTimeSaturday = () => {
                     </div>
 
                     <div className="flex text-md items-center sm:text-lg space-x-5">
-                      <div>
-                        ⭐ {result.voteAverage.toFixed(1) ?? "N/A"} / 10
-                      </div>
+                      <div>⭐ {result.voteAverage.toFixed(1) ?? "N/A"}</div>
                       <div>{result.releaseDate?.slice(0, 4) ?? "TBA"}</div>
-                      <div>1h 11m</div>
+                      <div>{convertToHourAndMinute(result?.runtime) || ""}</div>
                       <div
                         className={`${categoryColor?.softBgColor || "bg-gray-600/20"}  ${categoryColor?.textColor || "text-white"}  px-1 py-2 rounded-sm w-fit`}
                       >

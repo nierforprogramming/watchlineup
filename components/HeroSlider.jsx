@@ -28,6 +28,8 @@ const HeroSlider = () => {
     );
   }
 
+  console.log(featuredItems);
+
   return (
     <section className="w-full">
       <Swiper
@@ -81,11 +83,17 @@ const HeroSlider = () => {
 
                       <div className="flex space-x-8 font-semibold">
                         <p className="mt-4 text-lg text-white/90">
-                          ⭐ {result.voteAverage.toFixed(1) ?? "N/A"} / 10
+                          ⭐ {result.voteAverage.toFixed(1) ?? "N/A"}
                         </p>
 
                         <p className="mt-4 text-lg text-white/90">
                           {result.releaseDate?.slice(0, 4) ?? "TBA"}
+                        </p>
+
+                        <p className="mt-4 text-lg text-white/90">
+                          {result.runtime?.length
+                            ? result.runtime[0] + " m"
+                            : ""}
                         </p>
                       </div>
 
