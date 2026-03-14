@@ -51,7 +51,7 @@ const ScreenTimeSaturday = () => {
             );
             return (
               <SwiperSlide key={item.media.id}>
-                <div className="text-white grid sm:grid-cols-2 items-center gap-10">
+                <div className="text-white grid sm:grid-cols-2 items-center gap-10 sm:mt-10">
                   <div>
                     {result.genres.map((genre) => (
                       <span
@@ -71,7 +71,7 @@ const ScreenTimeSaturday = () => {
                       <div>{result.releaseDate?.slice(0, 4) ?? "TBA"}</div>
                       <div>{convertToHourAndMinute(result?.runtime) || ""}</div>
                       <div
-                        className={`${categoryColor?.softBgColor || "bg-gray-600/20"}  ${categoryColor?.textColor || "text-white"}  px-1 py-2 rounded-sm w-fit`}
+                        className={`${categoryColor?.softBgColor || "bg-gray-600/20"}  ${categoryColor?.textColor || "text-white"}  px-1 py-1 rounded-sm w-fit`}
                       >
                         {item.category}
                       </div>

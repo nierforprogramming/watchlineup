@@ -138,4 +138,10 @@ export const media = [
     tmdbId: 79061,
     mediaType: "tv",
   },
+  {
+    id: "big-city-greens",
+    name: "Big City Greens",
+    tmdbId: 80587,
+    mediaType: "tv",
+  },
 ];

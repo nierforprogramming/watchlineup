@@ -137,11 +137,18 @@ export const lineup = [
     category: "ZzzToons",
   },
   {
+    id: "big-city-greens-zzztoons",
+    days: ["Friday"],
+    mediaId: "big-city-greens",
+    category: "ZzzToons",
+  },
+  {
     id: "craig-of-the-creek-zzztoons",
     days: ["Saturday"],
     mediaId: "craig-of-the-creek",
     category: "ZzzToons",
   },
+
   {
     id: "the-spongebob-movie-screentime-saturday",
     days: DAY_GROUPS.WEEKENDS,

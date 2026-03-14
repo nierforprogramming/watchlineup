@@ -70,7 +70,7 @@ const HeroSlider = () => {
                         {result.genres.map((genre) => (
                           <span
                             key={genre.id}
-                            className="mx-1 my-4 inline-block bg-black/30 backdrop-blur-md text-md sm:text-lg px-1 py-2 rounded-sm"
+                            className="mx-1 my-4 inline-block bg-black/30 backdrop-blur-md text-md sm:text-lg px-2 py-1 rounded-sm"
                           >
                             {genre.name}
                           </span>
