@@ -15,26 +15,26 @@ export const DAY_GROUPS = {
 };
 
 export const lineup = [
+  // {
+  //   id: "one-piece-wakeup-watch",
+  //   days: DAY_GROUPS.EVERY_DAY,
+  //   mediaId: "one-piece",
+  //   category: "WakeUp Watch",
+  // },
+
   {
-    id: "one-piece-wakeup-watch",
+    id: "beastars-wakeup-watch",
     days: DAY_GROUPS.EVERY_DAY,
-    mediaId: "one-piece",
+    mediaId: "beastars",
     category: "WakeUp Watch",
   },
 
   {
-    id: "beastars-buzzwatch",
-    days: DAY_GROUPS.EVERY_DAY,
-    mediaId: "beastars",
+    id: "fate-strange-fake-buzzwatch",
+    days: ["Sunday"],
+    mediaId: "fate-strange-fake",
     category: "BuzzWatch",
   },
-
-  // {
-  //   id: "fate-strange-fake-buzzwatch",
-  //   days: DAY_GROUPS.EVERY_DAY,
-  //   mediaId: "fate-strange-fake",
-  //   category: "BuzzWatch",
-  // },
 
   {
     id: "kiff-snacks&toons",
@@ -117,6 +117,12 @@ export const lineup = [
     category: "Evening Flix",
   },
   {
+    id: "south-park-evening-flix",
+    days: ["Sunday"],
+    mediaId: "south-park",
+    category: "Evening Flix",
+  },
+  {
     id: "baby-bears-zzztoons",
     days: ["Tuesday"],
     mediaId: "we-baby-bears",
@@ -146,6 +152,12 @@ export const lineup = [
     id: "craig-of-the-creek-zzztoons",
     days: ["Saturday"],
     mediaId: "craig-of-the-creek",
+    category: "ZzzToons",
+  },
+  {
+    id: "regular-show-zzztoons",
+    days: ["Sunday"],
+    mediaId: "regular-show",
     category: "ZzzToons",
   },
 

@@ -144,4 +144,16 @@ export const media = [
     tmdbId: 80587,
     mediaType: "tv",
   },
+  {
+    id: "south-park",
+    name: "South Park",
+    tmdbId: 2190,
+    mediaType: "tv",
+  },
+  {
+    id: "regular-show",
+    name: "Regular Show",
+    tmdbId: 31132,
+    mediaType: "tv",
+  },
 ];
