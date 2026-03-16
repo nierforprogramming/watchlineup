@@ -32,21 +32,21 @@ const Footer = () => {
               <div>Frontend Stack</div>
               <div>Next.js</div>
               <div>Tailwind CSS</div>
-              <div>Swiper Js</div>
+              {/* <div>Swiper Js</div> */}
             </div>
 
             <div className="space-y-3 flex-1">
               <div>Tools</div>
               <div>Vite</div>
-              <div>VS Code</div>
-              <div>GitHub</div>
-              <div>TMDb API</div>
+              {/* <div>VS Code</div> */}
+              {/* <div>GitHub</div> */}
             </div>
 
             <div className="space-y-3 flex-1">
               <div>Backend Stack</div>
-              <div>Supabase</div>
-              <div>Prisma</div>
+              <div>TMDb API</div>
+              {/* <div>Supabase</div>
+              <div>Prisma</div> */}
             </div>
           </div>
         </div>
