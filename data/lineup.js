@@ -101,10 +101,16 @@ export const lineup = [
     category: "Weekend Watchout",
   },
 
+  // {
+  //   id: "fallout-episode-a-day",
+  //   days: DAY_GROUPS.WEEKDAYS,
+  //   mediaId: "fallout",
+  //   category: "Episode-A-Day",
+  // },
   {
-    id: "fallout-episode-a-day",
+    id: "the-sandman-episode-a-day",
     days: DAY_GROUPS.WEEKDAYS,
-    mediaId: "fallout",
+    mediaId: "the-sandman",
     category: "Episode-A-Day",
   },
 

@@ -186,4 +186,10 @@ export const media = [
     tmdbId: 84553,
     mediaType: "tv",
   },
+  {
+    id: "the-sandman",
+    name: "The Sandman",
+    tmdbId: 90802,
+    mediaType: "tv",
+  },
 ];
