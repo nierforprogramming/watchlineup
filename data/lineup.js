@@ -41,6 +41,12 @@ export const lineup = [
     mediaId: "to-your-eternity",
     category: "BuzzWatch",
   },
+  {
+    id: "frieren-beyond-journeys-end-buzzwatch",
+    days: ["Tuesday"],
+    mediaId: "frieren-beyond-journeys-end",
+    category: "BuzzWatch",
+  },
 
   {
     id: "kiff-snacks&toons",
@@ -151,6 +157,12 @@ export const lineup = [
     id: "futurama-evening-flix",
     days: ["Monday"],
     mediaId: "futurama",
+    category: "Evening Flix",
+  },
+  {
+    id: "family-guy-evening-flix",
+    days: ["Tuesday"],
+    mediaId: "family-guy",
     category: "Evening Flix",
   },
   {

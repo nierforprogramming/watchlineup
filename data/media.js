@@ -192,4 +192,16 @@ export const media = [
     tmdbId: 90802,
     mediaType: "tv",
   },
+  {
+    id: "frieren-beyond-journeys-end",
+    name: "Frieren: Beyond Journey's End",
+    tmdbId: 209867,
+    mediaType: "tv",
+  },
+  {
+    id: "family-guy",
+    name: "Family Guy",
+    tmdbId: 1434,
+    mediaType: "tv",
+  },
 ];
