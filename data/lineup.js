@@ -61,12 +61,20 @@ export const lineup = [
     mediaId: "kiff",
     category: "Snacks & Toons",
   },
+
   {
-    id: "gumball-mindsnack",
+    id: "big-city-greens-mindsnack",
     days: DAY_GROUPS.WEEKDAYS,
-    mediaId: "gumball",
+    mediaId: "big-city-greens",
     category: "Mind Snack",
   },
+
+  // {
+  //   id: "gumball-mindsnack",
+  //   days: DAY_GROUPS.WEEKDAYS,
+  //   mediaId: "gumball",
+  //   category: "Mind Snack",
+  // },
 
   {
     id: "vox-watch-streak",
@@ -193,12 +201,7 @@ export const lineup = [
     mediaId: "close-enough",
     category: "ZzzToons",
   },
-  {
-    id: "big-city-greens-zzztoons",
-    days: ["Friday"],
-    mediaId: "big-city-greens",
-    category: "ZzzToons",
-  },
+
   {
     id: "craig-of-the-creek-zzztoons",
     days: ["Saturday"],
