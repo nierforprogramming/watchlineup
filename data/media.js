@@ -72,22 +72,21 @@ export const media = [
   },
 
   {
-    id: "the-spongebob-movie",
-    name: "The SpongeBob Movie: Search for SquarePants",
-    tmdbId: 991494,
-    mediaType: "movie",
-  },
-
-  {
     id: "iron-lung",
     name: "Iron Lung",
     tmdbId: 1116201,
     mediaType: "movie",
   },
   {
-    id: "onward",
-    name: "Onward",
-    tmdbId: 508439,
+    id: "predestination",
+    name: "Predestination",
+    tmdbId: 206487,
+    mediaType: "movie",
+  },
+  {
+    id: "buffalo-kids",
+    name: "Buffalo Kids",
+    tmdbId: 1154304,
     mediaType: "movie",
   },
   {
@@ -208,6 +207,18 @@ export const media = [
     id: "one-punch-man",
     name: "One-Punch Man",
     tmdbId: 63926,
+    mediaType: "tv",
+  },
+  {
+    id: "re-zero",
+    name: "Re:ZERO -Starting Life in Another World-",
+    tmdbId: 65942,
+    mediaType: "tv",
+  },
+  {
+    id: "love-death-and-robots",
+    name: "Love, Death & Robots",
+    tmdbId: 86831,
     mediaType: "tv",
   },
 ];

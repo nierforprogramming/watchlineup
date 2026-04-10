@@ -54,6 +54,12 @@ export const lineup = [
     mediaId: "one-punch-man",
     category: "BuzzWatch",
   },
+  {
+    id: "re-zero-buzzwatch",
+    days: ["Friday"],
+    mediaId: "re-zero",
+    category: "BuzzWatch",
+  },
 
   {
     id: "kiff-snacks&toons",
@@ -220,12 +226,11 @@ export const lineup = [
     mediaId: "clarence",
     category: "ZzzToons",
   },
-
   {
-    id: "the-spongebob-movie-screentime-saturday",
-    days: DAY_GROUPS.WEEKENDS,
-    mediaId: "the-spongebob-movie",
-    category: "ScreenTime Saturday",
+    id: "love-death-and-robots-zzztoons",
+    days: ["Friday"],
+    mediaId: "love-death-and-robots",
+    category: "ZzzToons",
   },
 
   {
@@ -236,9 +241,15 @@ export const lineup = [
   },
 
   {
-    id: "onward-screentime-saturday",
+    id: "predestination-screentime-saturday",
     days: DAY_GROUPS.WEEKENDS,
-    mediaId: "onward",
+    mediaId: "predestination",
+    category: "ScreenTime Saturday",
+  },
+  {
+    id: "buffalo-kids-screentime-saturday",
+    days: DAY_GROUPS.WEEKENDS,
+    mediaId: "buffalo-kids",
     category: "ScreenTime Saturday",
   },
 ];
